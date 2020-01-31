@@ -63,7 +63,9 @@
             </c:forEach>
         </table>
     </c:if>
-    <input align="center" type="submit" name="logOut" value="Выход">
+    <h4 align="center">
+    <input type="submit" name="logOut" value="Выход">
+    </h4>
     </p>
 </form>
 </body>

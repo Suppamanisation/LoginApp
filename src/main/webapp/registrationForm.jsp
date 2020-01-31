@@ -5,6 +5,7 @@
     <title>Регистрация</title>
 </head>
 <body>
+<h4 align="center">
 <form name="registration" action="registration" method="post" onsubmit="return validation()">
     Имя пользователя:<br>
     <input type="text" name="name">
@@ -23,15 +24,16 @@
     Пол:<br>
     <input type="radio" name="sex" value="мужской"> мужской
     <input type="radio" name="sex" value="женский"> женский
-    <input type="radio" name="sex" value="нет"> не хочу говорить
+    <input type="radio" name="sex" value="нет"> не определился
     <br>
-    Адрес:<br>
+    Место работы:<br>
     <input type="text" name="address">
     <br>
     <input type="checkbox" name="isAdmin"/> Администратор
     <br>
     <input type="submit" value="OK">
 </form>
+</h4>
 </body>
 </html>
 <script>
@@ -70,7 +72,7 @@
         }
         value = form["address"].value;
         if (value == null || value == "") {
-            alert("Введте адрес");
+            alert("Введите место работы");
             return false;
         }
     }

@@ -5,9 +5,11 @@
 
 <html>
 <head>
-    <title>Добро пожаловать!</title>
+    <title>Здравствуйте</title>
 </head>
 <body>
+<h1 align="center">Добро пожаловать!</h1>
+<h4 align="center">
 <form name="login" action="login" method="post">
     Имя пользователя:<br>
     <input type="text" name="userName">
@@ -21,6 +23,7 @@
 <c:if test="${error != null}">
     <font color="red">${error}</font><br>
 </c:if>
+</h4>
 </body>
 </html>
 

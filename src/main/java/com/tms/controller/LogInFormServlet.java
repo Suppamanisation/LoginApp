@@ -27,7 +27,6 @@ public class LogInFormServlet extends HttpServlet {
         if (req.getParameter("registration") != null) {
             getServletContext().getRequestDispatcher("/registrationForm.jsp").forward(req, resp);
         } else if (req.getParameter("logOut") != null) {
-            //req.getSession().setAttribute("user", null);
             resp.sendRedirect("loginForm.jsp");
         } else {
             String name, password;

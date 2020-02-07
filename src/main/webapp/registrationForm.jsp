@@ -1,4 +1,5 @@
-<%@ page contentType="text/html;charset=UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8" isELIgnored="false" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:useBean id="user" class="com.tms.bean.User" />
 <html>
 <head>
@@ -33,6 +34,9 @@
     <br>
     <input type="submit" value="OK">
 </form>
+    <c:if test="${newError != null}">
+        <font color="red">${newError}</font><br>
+    </c:if>
 </h4>
 </body>
 </html>
@@ -44,6 +48,7 @@
             alert("Введите имя пользователя");
             return false;
         }
+
         var regex = new RegExp("^[a-zA-Z0-9_]+$");
         if (!regex.test(value)) {
             alert("Имя пользователя может состоять только из английских букв, цифр и знака _");

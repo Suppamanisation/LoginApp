@@ -61,7 +61,7 @@ public class UserDao implements Dao<User> {
             replacement.setLastName(userEdit.getLastName());
             replacement.setPassword(userEdit.getPassword());
             replacement.setSex(userEdit.getSex());
-            users.remove(userEdit);
+            users.remove(userOriginal);
             users.add(replacement);
         }
         }
